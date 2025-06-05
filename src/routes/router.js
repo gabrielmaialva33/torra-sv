@@ -6,6 +6,9 @@ import {wrap} from 'svelte-spa-router/wrap';
 import {get} from 'svelte/store';
 import {authStore} from '../stores/auth.store';
 
+// Get base path from Vite config
+const basePath = import.meta.env.BASE_URL.slice(0, -1); // Remove trailing slash
+
 // Lazy load all routes for better performance
 const routes = {
     // Public routes
