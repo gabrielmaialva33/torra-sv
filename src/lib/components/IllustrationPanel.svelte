@@ -41,28 +41,26 @@
   <div class="absolute bottom-0 left-0 right-0 h-full">
     {#if visible}
       <!-- Woman Illustration -->
-      <div class="absolute left-[51.6px] bottom-0 z-10" 
+      <div class="absolute left-[51.6px] bottom-[100px] z-10" 
            in:fly={{ y: 100, duration: 800, delay: 500 }}>
         <img 
           src={womanIllustration} 
           alt="Woman" 
           class="w-[153px] h-[468px] object-bottom object-cover"
-          style="transform: translateY(268px);"
         />
       </div>
       
       <!-- Man Illustration with Box -->
-      <div class="absolute left-[201.6px] bottom-0 z-10"
+      <div class="absolute left-[201.6px] bottom-[86px] z-10"
            in:fly={{ y: 100, duration: 800, delay: 700 }}>
         <div class="relative">
           <img 
             src={manIllustration} 
             alt="Delivery man" 
             class="w-[204px] h-[454px] object-bottom object-cover"
-            style="transform: translateY(254px);"
           />
           <!-- TORRA text on box -->
-          <div class="absolute bottom-[408px] left-[72px] bg-white text-[#FF5101] font-bold text-[9px] px-[5px] py-[1px] rounded-[2px]"
+          <div class="absolute top-[154px] left-[72px] bg-white text-[#FF5101] font-bold text-[10px] px-[5px] py-[2px] rounded-[2px]"
                style="transform: rotate(-5deg); font-family: 'Roboto', sans-serif; letter-spacing: 0.3px;"
                in:fade={{ duration: 300, delay: 900 }}>
             TORRA
