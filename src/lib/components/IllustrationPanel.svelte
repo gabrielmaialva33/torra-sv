@@ -21,47 +21,57 @@
   
   <!-- Click & Retire Logo -->
   {#if visible}
-    <div class="absolute top-[95.85px] left-[92.6px] z-20" in:fade={{ duration: 500, delay: 300 }}>
+    <div class="absolute" style="top: 95.85px; left: 92.6px; z-index: 20;" in:fade={{ duration: 500, delay: 300 }}>
       <div class="flex items-center" style="font-family: 'Roboto', sans-serif;">
-        <span class="text-white font-bold" style="font-size: 40px; line-height: 1.25; letter-spacing: -0.02em;">
+        <span class="text-white font-bold" style="font-size: 40px; line-height: 50px; letter-spacing: -0.02em;">
           CLICK
         </span>
-        <span class="text-white mx-[10px]" style="font-size: 32px; line-height: 1.25; font-weight: 300;">
+        <span class="text-white" style="font-size: 32px; line-height: 50px; font-weight: 300; margin: 0 10px;">
           &
         </span>
-        <div class="bg-[#FF5101] text-white font-bold px-[16px] py-[5px] rounded-[4px]" 
-             style="font-size: 40px; line-height: 1.25; letter-spacing: -0.02em;">
+        <div class="bg-[#FF5101] text-white font-bold rounded-[4px]" 
+             style="font-size: 40px; line-height: 50px; letter-spacing: -0.02em; padding: 0 16px;">
           RETIRE
         </div>
       </div>
     </div>
   {/if}
   
-  <!-- Illustrations Container -->
-  <div class="absolute bottom-0 left-0 right-0 h-full">
+  <!-- Illustrations Container - positioned from bottom to show only upper body -->
+  <div class="absolute bottom-0 left-0 right-0 w-full h-full">
     {#if visible}
-      <!-- Woman Illustration -->
-      <div class="absolute left-[51.6px] bottom-[100px] z-10" 
+      <!-- Woman Illustration - positioned exactly as in Figma -->
+      <div class="absolute" 
+           style="left: 51.6px; bottom: -268px; z-index: 10;"
            in:fly={{ y: 100, duration: 800, delay: 500 }}>
         <img 
           src={womanIllustration} 
           alt="Woman" 
-          class="w-[153px] h-[468px] object-bottom object-cover"
+          style="width: 153px; height: 468px;"
         />
       </div>
       
-      <!-- Man Illustration with Box -->
-      <div class="absolute left-[201.6px] bottom-[86px] z-10"
+      <!-- Man Illustration with Box - positioned exactly as in Figma -->
+      <div class="absolute"
+           style="left: 201.6px; bottom: -254px; z-index: 10;"
            in:fly={{ y: 100, duration: 800, delay: 700 }}>
         <div class="relative">
           <img 
             src={manIllustration} 
             alt="Delivery man" 
-            class="w-[204px] h-[454px] object-bottom object-cover"
+            style="width: 204px; height: 454px;"
           />
-          <!-- TORRA text on box -->
-          <div class="absolute top-[154px] left-[72px] bg-white text-[#FF5101] font-bold text-[10px] px-[5px] py-[2px] rounded-[2px]"
-               style="transform: rotate(-5deg); font-family: 'Roboto', sans-serif; letter-spacing: 0.3px;"
+          <!-- TORRA text on box - positioned relative to the image -->
+          <div class="absolute bg-white text-[#FF5101] font-bold rounded-[2px]"
+               style="
+                 top: 153px; 
+                 left: 70px; 
+                 font-size: 10px; 
+                 padding: 2px 6px;
+                 transform: rotate(-5deg);
+                 font-family: 'Roboto', sans-serif; 
+                 letter-spacing: 0.3px;
+               "
                in:fade={{ duration: 300, delay: 900 }}>
             TORRA
           </div>
