@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom gradient background for the right panel */
+.gradient-panel {
+  background: radial-gradient(circle at 50% 58%, #42437B 0%, #181945 100%);
+}
