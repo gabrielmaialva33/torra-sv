@@ -123,7 +123,7 @@
         top: {ripple.y}px;
         transform: translate(-50%, -50%);
       "
-    />
+    ></span>
   {/each}
 </button>
 

@@ -92,14 +92,15 @@
             <span class="text-base font-roboto text-torra-dark">
               Não se lembra da sua senha?
             </span>
-            <a
-              href="#"
+            <button
+              type="button"
+              on:click={() => console.log('Password recovery clicked')}
               on:mouseenter={() => linkHovered = true}
               on:mouseleave={() => linkHovered = false}
-              class="text-base font-roboto text-torra-orange-light ml-2 hover:text-torra-orange transition-colors duration-200 {linkHovered ? 'underline' : ''}"
+              class="text-base font-roboto text-torra-orange-light ml-2 hover:text-torra-orange transition-colors duration-200 {linkHovered ? 'underline' : ''} bg-transparent border-none cursor-pointer"
             >
               Resgate aqui
-            </a>
+            </button>
           </div>
         </div>
       </div>
