@@ -59,6 +59,7 @@ jobs:
         run: pnpm build
         env:
           NODE_ENV: production
+          VITE_USE_MOCKS: true
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
