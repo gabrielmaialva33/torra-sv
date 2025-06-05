@@ -3,6 +3,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Reset body styles */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+#app {
+  min-width: 1440px;
+  min-height: 100vh;
+}
+
 /* Custom gradient background for the right panel */
 .gradient-panel {
   background: radial-gradient(circle at 50% 58%, #42437B 0%, #181945 100%);

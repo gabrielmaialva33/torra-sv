@@ -1,10 +1,12 @@
 # Lojas Torra - Click & Retire System
 
-A modern web application built with Svelte and Tailwind CSS, implementing a visually striking login interface for the Lojas Torra Click & Retire system.
+A modern web application built with Svelte and Tailwind CSS, implementing a visually striking login interface for the
+Lojas Torra Click & Retire system.
 
 ## 🚀 Project Overview
 
-This project implements a login page based on the Figma design for Lojas Torra's Click & Retire system. The design emphasizes a modern, clean aesthetic with smooth animations and a distinctive visual identity.
+This project implements a login page based on the Figma design for Lojas Torra's Click & Retire system. The design
+emphasizes a modern, clean aesthetic with smooth animations and a distinctive visual identity.
 
 ### Key Features
 
@@ -30,22 +32,26 @@ This project implements a login page based on the Figma design for Lojas Torra's
 ## 🔧 Installation & Setup
 
 1. Clone the repository:
+
 ```bash
 git clone [repository-url]
 cd torra-sv
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start the development server:
+
 ```bash
 npm run dev
 ```
 
 4. Build for production:
+
 ```bash
 npm run build
 ```
@@ -56,21 +62,43 @@ npm run build
 
 ```css
 /* Primary Colors */
---torra-orange: #FF5101;
---torra-orange-light: #FF7B3D;
---torra-dark: #1A1630;
+--torra-orange: #FF5101
+
+;
+--torra-orange-light: #FF7B3D
+
+;
+--torra-dark: #1A1630
+
+;
 
 /* Gradient Colors */
---torra-gradient-start: #42437B;
---torra-gradient-end: #181945;
+--torra-gradient-start: #42437B
+
+;
+--torra-gradient-end: #181945
+
+;
 
 /* Gray Scale */
---torra-gray-100: #F0F0F2;
---torra-gray-200: #EBECF1;
---torra-gray-300: #E3E4E9;
---torra-gray-400: #DBE2EB;
---torra-gray-500: #6C757D;
---torra-gray-600: #495057;
+--torra-gray-100: #F0F0F2
+
+;
+--torra-gray-200: #EBECF1
+
+;
+--torra-gray-300: #E3E4E9
+
+;
+--torra-gray-400: #DBE2EB
+
+;
+--torra-gray-500: #6C757D
+
+;
+--torra-gray-600: #495057
+
+;
 ```
 
 ### Typography
@@ -80,17 +108,18 @@ npm run build
 
 ### Design Decisions
 
-1. **Visual Identity**: The design maintains Lojas Torra's brand identity with the distinctive orange color (#FF5101) and clean, modern aesthetics.
+1. **Visual Identity**: The design maintains Lojas Torra's brand identity with the distinctive orange color (#FF5101)
+   and clean, modern aesthetics.
 
-2. **User Experience**: 
-   - Clear visual hierarchy guides users to the login form
-   - Smooth animations create a premium feel
-   - Hover states provide immediate feedback
+2. **User Experience**:
+    - Clear visual hierarchy guides users to the login form
+    - Smooth animations create a premium feel
+    - Hover states provide immediate feedback
 
-3. **Accessibility**: 
-   - High contrast ratios for text readability
-   - Semantic HTML structure
-   - Keyboard navigation support
+3. **Accessibility**:
+    - High contrast ratios for text readability
+    - Semantic HTML structure
+    - Keyboard navigation support
 
 ## 📁 Project Structure
 
