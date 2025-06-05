@@ -3,6 +3,8 @@
   import { quintOut } from 'svelte/easing';
   import { User, Lock } from 'lucide-svelte';
   import InputField from './InputField.svelte';
+  import clickRetireLogo from '../../assets/images/click-retire-logo.svg';
+  import torraLogo from '../../assets/images/torra-logo.svg';
   
   let username = '';
   let password = '';
@@ -33,9 +35,11 @@
     >
       <!-- Logo Torra -->
       <div class="absolute top-[31.85px] left-1/2 transform -translate-x-1/2 z-10">
-        <div class="w-[111.19px] h-[76px] bg-[#FF5101] rounded-lg flex items-center justify-center shadow-lg">
-          <span class="text-white font-bold text-2xl">TORRA</span>
-        </div>
+        <img 
+          src={torraLogo} 
+          alt="Lojas Torra" 
+          class="w-[111.19px] h-[76px]"
+        />
       </div>
       
       <!-- Separator line -->
@@ -103,12 +107,11 @@
     >
       <!-- Click & Retire Logo -->
       <div class="absolute top-[96px] left-1/2 transform -translate-x-1/2 z-10">
-        <div class="w-[258px] h-[50px] bg-white rounded-lg shadow-xl flex items-center justify-center">
-          <div class="flex items-center gap-2">
-            <div class="w-2 h-2 bg-[#FF5101] rounded-full"></div>
-            <span class="text-[#FF5101] font-bold text-2xl">Click & Retire</span>
-          </div>
-        </div>
+        <img 
+          src={clickRetireLogo} 
+          alt="Click & Retire" 
+          class="w-[258px] h-[50px] drop-shadow-xl"
+        />
       </div>
       
       <!-- Character Illustrations (placeholders) -->
