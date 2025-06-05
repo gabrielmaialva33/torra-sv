@@ -5,6 +5,9 @@ import path from 'path'
 // https://vite.dev/config/
 export default defineConfig({
     plugins: [svelte()],
+    // Configure base path for GitHub Pages
+    // Replace 'torra-sv' with your repository name
+    base: process.env.NODE_ENV === 'production' ? '/torra-sv/' : '/',
     resolve: {
         alias: {
             '$lib': path.resolve('./src/lib'),
