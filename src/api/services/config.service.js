@@ -7,7 +7,7 @@ import {mockConfigData, mockDelay, mockError, mockSuccess} from '../mocks';
  */
 class ConfigService {
     constructor() {
-        this.useMock = import.meta.env.DEV || !import.meta.env.VITE_API_URL || import.meta.env.VITE_USE_MOCKS === "true";
+        this.useMock = true;
     }
 
     /**
