@@ -1,8 +1,16 @@
 <script>
-  import LandingPage from './lib/pages/LandingPage.svelte';
+  import { onMount } from 'svelte';
+  import Router from 'svelte-spa-router';
+  import { authStore } from './stores/auth.store';
+  import routes from './routes/router';
+  
+  // Initialize auth store
+  onMount(() => {
+    authStore.init();
+  });
 </script>
 
-<LandingPage />
+<Router {routes} />
 
 <style>
   :global(html, body) {
@@ -10,7 +18,7 @@
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow-x: auto;
+    overflow-x: hidden;
   }
   
   :global(body) {
@@ -21,5 +29,24 @@
   
   :global(*) {
     box-sizing: border-box;
+  }
+  
+  /* Custom scrollbar */
+  :global(::-webkit-scrollbar) {
+    width: 8px;
+    height: 8px;
+  }
+  
+  :global(::-webkit-scrollbar-track) {
+    background: #f1f1f1;
+  }
+  
+  :global(::-webkit-scrollbar-thumb) {
+    background: #FF5101;
+    border-radius: 4px;
+  }
+  
+  :global(::-webkit-scrollbar-thumb:hover) {
+    background: #FF7B3D;
   }
 </style>
