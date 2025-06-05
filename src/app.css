@@ -2,25 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Remove any default margins and ensure full height */
+/* High-quality font rendering */
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  html {
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  }
+}
+
+/* Ensure full height and proper background */
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  background-color: #EFEFEF;
 }
 
 #app {
   width: 100%;
   height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #EFEFEF;
+  flex-direction: column;
 }
 
-/* Custom utility classes */
+/* Custom scrollbar for better UX */
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #D6D7DC;
+    border-radius: 3px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #B8B9BE;
+  }
+}
+
+/* Professional animations */
 @layer utilities {
   .animate-fade-in {
     animation: fadeIn 0.5s ease-out forwards;
@@ -28,22 +61,15 @@ html, body {
   }
   
   .animate-slide-in-left {
-    animation: slideInLeft 0.6s ease-out forwards;
+    animation: slideInLeft 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
   
   .animate-slide-in-right {
-    animation: slideInRight 0.6s ease-out forwards;
+    animation: slideInRight 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 }
 
-/* Ensure fonts are applied correctly */
-body {
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Reset focus styles for better accessibility */
+/* Focus styles for accessibility */
 *:focus {
   outline: none;
 }
@@ -51,4 +77,38 @@ body {
 *:focus-visible {
   outline: 2px solid #FF5101;
   outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Button press effect */
+button:active {
+  transform: scale(0.98);
+}
+
+/* Selection color */
+::selection {
+  background-color: #FF5101;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #FF5101;
+  color: white;
+}
+
+/* Ensure fonts load correctly */
+body {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* High DPI screen optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body {
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+  
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
 }
