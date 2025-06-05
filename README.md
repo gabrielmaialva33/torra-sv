@@ -1,10 +1,14 @@
 # Torra SV - Click & Retire System
 
-A modern, professional web application built with **Svelte**, **Tailwind CSS**, and **shadcn-ui** for Lojas Torra's Click & Retire system. This project showcases a visually striking login interface with immersive animations and a distinctive brand identity.
+A modern, professional web application built with **Svelte**, **Tailwind CSS**, and **shadcn-ui** for Lojas Torra's
+Click & Retire system. This project showcases a visually striking login interface with immersive animations and a
+distinctive brand identity.
 
 ## 🎨 Design Philosophy
 
-The application embodies a unique visual identity inspired by the [Figma design](https://www.figma.com/design/xCCqMmngtZ6G8symsyJ7O5/Sistema-Clique-e-Retira?node-id=25-2772&t=cBYxPyMJrrNlzclz-4), featuring:
+The application embodies a unique visual identity inspired by
+the [Figma design](https://www.figma.com/design/xCCqMmngtZ6G8symsyJ7O5/Sistema-Clique-e-Retira?node-id=25-2772&t=cBYxPyMJrrNlzclz-4),
+featuring:
 
 - **Split-screen layout**: Clean form interface with vibrant illustration panel
 - **Brand colors**: Torra orange (#FF5101) with deep purple gradients
@@ -84,6 +88,7 @@ torra-sv/
 The project uses custom Tailwind configuration to match the Figma design:
 
 ### Colors
+
 - **Torra Orange**: `#FF5101` (primary brand color)
 - **Orange Light**: `#FF7B3D` (hover states)
 - **Purple Gradient**: Radial gradient from `#42437B` to `#181945`
@@ -91,17 +96,20 @@ The project uses custom Tailwind configuration to match the Figma design:
 - **Grays**: Custom scale from `#FFFFFF` to `#000000`
 
 ### Typography
+
 - **Headings**: Roboto, 32px, weight 500
 - **Body**: Inter, 16px, weight 400
 - **Buttons**: Inter, 16px, weight 700, uppercase
 - **Input**: Roboto, 15px, weight 400
 
 ### Shadows
+
 - **Card**: `0px 6px 8px rgba(4, 4, 7, 0.1)`
 - **Button**: `0px 0px 10px -5px rgba(112, 94, 200, 0.5)`
 - **Footer**: `16px 0px 16px rgba(24, 23, 38, 0.06)`
 
 ### Border Radius
+
 - **Left Panel**: `8px 0px 0px 8px`
 - **Right Panel**: `0px 8px 8px 0px`
 - **Inputs**: `3px 0px 0px 3px` (left), `0px 5px 5px 0px` (right)
@@ -109,6 +117,7 @@ The project uses custom Tailwind configuration to match the Figma design:
 ## 🧩 Components
 
 ### Core Components
+
 - **Login**: Full login page with split-screen design
 - **InputField**: Custom input with icon support and animations
 - **Button**: Styled button with hover effects and loading states
@@ -116,6 +125,7 @@ The project uses custom Tailwind configuration to match the Figma design:
 - **Footer**: Copyright footer with proper styling
 
 ### shadcn-ui Integration
+
 The project is configured to use shadcn-ui components:
 
 ```bash
@@ -126,6 +136,7 @@ npx shadcn@latest add form
 ```
 
 ### Animation Classes
+
 - `animate-float`: Smooth floating animation (6s loop)
 - `animate-slide-in-left`: Left entrance animation
 - `animate-slide-in-right`: Right entrance animation
@@ -135,13 +146,16 @@ npx shadcn@latest add form
 ## 🔧 Development Workflow
 
 ### Import Aliases
+
 The project uses import aliases for cleaner imports:
+
 - `$lib`: `./src/lib`
 - `$components`: `./src/lib/components`
 - `$pages`: `./src/lib/pages`
 - `$assets`: `./src/assets`
 
 ### Code Style
+
 - Use English for all code, comments, and documentation
 - Follow Svelte best practices
 - Use JSDoc comments for component props
@@ -149,6 +163,7 @@ The project uses import aliases for cleaner imports:
 - Use `cn()` utility for conditional classes
 
 ### Git Workflow
+
 ```bash
 # Feature branch
 git checkout -b feature/component-name
@@ -175,12 +190,14 @@ The project is configured for easy deployment:
    ```
 
 3. **Deploy to your platform**
-   - **Vercel**: Connect GitHub repo and deploy automatically
-   - **Netlify**: Drag & drop dist folder or connect repo
-   - **Custom**: Upload dist folder to your server
+    - **Vercel**: Connect GitHub repo and deploy automatically
+    - **Netlify**: Drag & drop dist folder or connect repo
+    - **Custom**: Upload dist folder to your server
 
 ### Environment Variables
+
 Create a `.env` file for environment-specific configuration:
+
 ```env
 VITE_API_URL=https://api.lojastorra.com.br
 VITE_APP_NAME=Click & Retire
@@ -220,6 +237,7 @@ pnpm test:watch
 5. Open a Pull Request
 
 ### Commit Convention
+
 - `feat:` New features
 - `fix:` Bug fixes
 - `docs:` Documentation changes

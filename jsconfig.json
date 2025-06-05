@@ -5,16 +5,36 @@
     "module": "ESNext",
     "baseUrl": ".",
     "paths": {
-      "$lib": ["./src/lib"],
-      "$lib/*": ["./src/lib/*"],
-      "$src": ["./src"],
-      "$src/*": ["./src/*"],
-      "$assets": ["./src/assets"],
-      "$assets/*": ["./src/assets/*"],
-      "$components": ["./src/lib/components"],
-      "$components/*": ["./src/lib/components/*"],
-      "$pages": ["./src/lib/pages"],
-      "$pages/*": ["./src/lib/pages/*"]
+      "$lib": [
+        "./src/lib"
+      ],
+      "$lib/*": [
+        "./src/lib/*"
+      ],
+      "$src": [
+        "./src"
+      ],
+      "$src/*": [
+        "./src/*"
+      ],
+      "$assets": [
+        "./src/assets"
+      ],
+      "$assets/*": [
+        "./src/assets/*"
+      ],
+      "$components": [
+        "./src/lib/components"
+      ],
+      "$components/*": [
+        "./src/lib/components/*"
+      ],
+      "$pages": [
+        "./src/lib/pages"
+      ],
+      "$pages/*": [
+        "./src/lib/pages/*"
+      ]
     },
     /**
      * svelte-preprocess cannot figure out whether you have
@@ -41,5 +61,9 @@
    * Use global.d.ts instead of compilerOptions.types
    * to avoid limiting type declarations.
    */
-  "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte"]
+  "include": [
+    "src/**/*.d.ts",
+    "src/**/*.js",
+    "src/**/*.svelte"
+  ]
 }
