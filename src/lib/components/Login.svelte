@@ -3,8 +3,7 @@
   import { quintOut } from 'svelte/easing';
   import { User, Lock } from 'lucide-svelte';
   import InputField from './InputField.svelte';
-  import clickRetireLogo from '../../assets/images/click-retire-logo.svg';
-  import torraLogo from '../../assets/images/torra-logo.svg';
+  import { torraLogo, clickRetireLogo } from '../../assets';
   
   let username = '';
   let password = '';
