@@ -7,7 +7,7 @@ import {mockDelay, mockError, mockReceivingData, mockSuccess, paginate} from '..
  */
 class ReceivingService {
     constructor() {
-        this.useMock = import.meta.env.DEV;
+        this.useMock = import.meta.env.DEV || !import.meta.env.VITE_API_URL || import.meta.env.VITE_USE_MOCKS === "true";
     }
 
     /**

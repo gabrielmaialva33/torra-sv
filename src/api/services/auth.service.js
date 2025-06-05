@@ -7,8 +7,8 @@ import {mockAuthData} from '../mocks/auth.mock';
  */
 class AuthService {
     constructor() {
-        // Use mock data in development
-        this.useMock = import.meta.env.DEV;
+        // Use mock data in development or when API URL is not configured
+        this.useMock = import.meta.env.DEV || !import.meta.env.VITE_API_URL || import.meta.env.VITE_USE_MOCKS === 'true';
     }
 
     /**
