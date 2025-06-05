@@ -3,6 +3,19 @@
     "moduleResolution": "bundler",
     "target": "ESNext",
     "module": "ESNext",
+    "baseUrl": ".",
+    "paths": {
+      "$lib": ["./src/lib"],
+      "$lib/*": ["./src/lib/*"],
+      "$src": ["./src"],
+      "$src/*": ["./src/*"],
+      "$assets": ["./src/assets"],
+      "$assets/*": ["./src/assets/*"],
+      "$components": ["./src/lib/components"],
+      "$components/*": ["./src/lib/components/*"],
+      "$pages": ["./src/lib/pages"],
+      "$pages/*": ["./src/lib/pages/*"]
+    },
     /**
      * svelte-preprocess cannot figure out whether you have
      * a value or a type, so tell TypeScript to enforce using

@@ -1,177 +1,232 @@
-# Torra Click & Retire - Modern Web Application
+# Torra SV - Click & Retire System
 
-A visually striking, modern web application built with Svelte and Tailwind CSS for the Torra Click & Retire system. This project creates an immersive login experience with smooth animations, micro-interactions, and a distinctive visual identity.
+A modern, professional web application built with **Svelte**, **Tailwind CSS**, and **shadcn-ui** for Lojas Torra's Click & Retire system. This project showcases a visually striking login interface with immersive animations and a distinctive brand identity.
 
 ## 🎨 Design Philosophy
 
-The application implements a sophisticated two-panel layout that communicates the brand's modern, efficient service:
+The application embodies a unique visual identity inspired by the [Figma design](https://www.figma.com/design/xCCqMmngtZ6G8symsyJ7O5/Sistema-Clique-e-Retira?node-id=25-2772&t=cBYxPyMJrrNlzclz-4), featuring:
 
-- **Left Panel**: Clean, minimalist login form with subtle interactions
-- **Right Panel**: Dynamic gradient background with animated illustrations
-- **Visual Identity**: Incorporates Torra's orange (#FF5101) and purple gradient palette
-- **Micro-interactions**: Smooth transitions, hover effects, and loading states
+- **Split-screen layout**: Clean form interface with vibrant illustration panel
+- **Brand colors**: Torra orange (#FF5101) with deep purple gradients
+- **Micro-interactions**: Smooth animations and hover effects
+- **Professional typography**: Inter and Roboto fonts for optimal readability
+- **Responsive design**: Fully adaptive across all device sizes
 
-## 🚀 Quick Start
+## 🚀 Features
 
-### Prerequisites
+- **Modern Tech Stack**: Svelte 5 + Vite for blazing-fast performance
+- **Tailwind CSS**: Utility-first styling with custom design tokens
+- **shadcn-ui Components**: Professional UI components with consistent design
+- **Animated Elements**: Smooth transitions and interactive components
+- **Figma Integration**: Design tokens imported from Figma
+- **Type Safety**: JSDoc comments for better developer experience
+- **Optimized Assets**: SVG icons and optimized images
 
-- Node.js 16+ 
-- npm or pnpm
-
-### Installation
-
-```bash
-# Clone the repository
-git clone [repository-url]
-cd torra-sv
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
-
-The application will be available at `http://localhost:5173`
-
-### Build for Production
-
-```bash
-npm run build
-npm run preview
-```
-
-## 📁 Project Structure
+## 📦 Project Structure
 
 ```
 torra-sv/
 ├── src/
-│   ├── assets/          # Images, icons, and static assets
-│   │   ├── icons/       # UI and brand icons
-│   │   └── images/      # Illustrations and backgrounds
 │   ├── lib/
-│   │   ├── components/  # Reusable UI components
-│   │   │   ├── IconInput.svelte      # Input field with icon prefix
-│   │   │   ├── LoginPanel.svelte     # Login form container
-│   │   │   ├── IllustrationPanel.svelte # Animated illustrations
-│   │   │   └── Footer.svelte         # Page footer
-│   │   └── pages/       # Page components
-│   │       └── LandingPage.svelte    # Main landing page
-│   ├── App.svelte       # Root application component
-│   ├── app.css          # Global styles and animations
+│   │   ├── components/     # Reusable UI components
+│   │   │   ├── Button.svelte
+│   │   │   ├── InputField.svelte
+│   │   │   ├── Login.svelte
+│   │   │   └── ...
+│   │   ├── pages/         # Page components
+│   │   │   └── LandingPage.svelte
+│   │   └── utils.js       # Utility functions (cn, etc.)
+│   ├── assets/           # Images, icons, and static assets
+│   │   ├── icons/
+│   │   ├── images/
+│   │   └── utils/
+│   ├── app.css          # Global styles and CSS variables
+│   ├── App.svelte       # Root component
 │   └── main.js          # Application entry point
+├── public/              # Static assets
+├── components.json      # shadcn-ui configuration
 ├── tailwind.config.js   # Tailwind configuration with custom tokens
-└── vite.config.js       # Vite bundler configuration
+├── vite.config.js       # Vite configuration
+└── package.json         # Project dependencies
 ```
 
-## 🎨 Design System
+## 🛠️ Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone [repository-url]
+   cd torra-sv
+   ```
+
+2. **Install dependencies**
+   ```bash
+   pnpm install
+   # or
+   npm install
+   ```
+
+3. **Start development server**
+   ```bash
+   pnpm dev
+   # or
+   npm run dev
+   ```
+
+4. **Build for production**
+   ```bash
+   pnpm build
+   # or
+   npm run build
+   ```
+
+## 🎨 Design Tokens
+
+The project uses custom Tailwind configuration to match the Figma design:
 
 ### Colors
-
-The color palette is extracted from the Figma design and configured in Tailwind:
-
-- **Primary Orange**: `#FF5101` (torra-orange)
-- **Light Orange**: `#FF7B3D` (torra-orange-light)
-- **Dark Text**: `#1A1630` (torra-dark)
-- **Purple Gradient**: `#42437B` → `#181945`
-- **Grays**: Multiple shades from `#FFFFFF` to `#000000`
+- **Torra Orange**: `#FF5101` (primary brand color)
+- **Orange Light**: `#FF7B3D` (hover states)
+- **Purple Gradient**: Radial gradient from `#42437B` to `#181945`
+- **Dark Text**: `#1A1630`
+- **Grays**: Custom scale from `#FFFFFF` to `#000000`
 
 ### Typography
+- **Headings**: Roboto, 32px, weight 500
+- **Body**: Inter, 16px, weight 400
+- **Buttons**: Inter, 16px, weight 700, uppercase
+- **Input**: Roboto, 15px, weight 400
 
-- **Headings**: Roboto Medium, 32px
-- **Body Text**: Roboto Regular, 16px
-- **Input Fields**: Roboto Regular, 15px
-- **Buttons**: Inter Bold, 16px with letter-spacing
+### Shadows
+- **Card**: `0px 6px 8px rgba(4, 4, 7, 0.1)`
+- **Button**: `0px 0px 10px -5px rgba(112, 94, 200, 0.5)`
+- **Footer**: `16px 0px 16px rgba(24, 23, 38, 0.06)`
 
-### Animations
+### Border Radius
+- **Left Panel**: `8px 0px 0px 8px`
+- **Right Panel**: `0px 8px 8px 0px`
+- **Inputs**: `3px 0px 0px 3px` (left), `0px 5px 5px 0px` (right)
 
-All animations use cubic-bezier easing for natural motion:
+## 🧩 Components
 
-- **Slide-in**: Panels slide from left/right on load
-- **Fade-in**: Sequential element appearance
-- **Float**: Continuous floating animation for illustrations
-- **Hover Effects**: Subtle scale and shadow changes
+### Core Components
+- **Login**: Full login page with split-screen design
+- **InputField**: Custom input with icon support and animations
+- **Button**: Styled button with hover effects and loading states
+- **IllustrationPanel**: Animated background with floating elements
+- **Footer**: Copyright footer with proper styling
 
-## 🧩 Key Components
+### shadcn-ui Integration
+The project is configured to use shadcn-ui components:
 
-### LandingPage
-The main container that orchestrates the two-panel layout and manages the overall page structure.
+```bash
+# Add new components
+npx shadcn@latest add button
+npx shadcn@latest add card
+npx shadcn@latest add form
+```
 
-### LoginPanel
-Contains the authentication form with:
-- Animated logo
-- Custom input fields with icon prefixes
-- Interactive submit button with loading state
-- Password recovery link
+### Animation Classes
+- `animate-float`: Smooth floating animation (6s loop)
+- `animate-slide-in-left`: Left entrance animation
+- `animate-slide-in-right`: Right entrance animation
+- `animate-fade-in`: Fade in effect
+- `animate-pulse-slow`: Gentle pulsing effect
 
-### IconInput
-A reusable input component featuring:
-- Icon prefix in a separate container
-- Focus states with color transitions
-- Hover effects
-- Accessibility support
+## 🔧 Development Workflow
 
-### IllustrationPanel
-Dynamic right panel with:
-- Radial gradient background
-- Floating illustrations with staggered animations
-- Particle effects
-- Click & Retire branding
-
-## 🔧 Technical Details
-
-### Tailwind Configuration
-
-The `tailwind.config.js` includes:
-- Custom color tokens matching Figma design
-- Extended spacing scale for precise layouts
-- Custom border radius variants
-- Animation utilities
-- Typography presets
-
-### Animation System
-
-Animations are implemented using:
-- CSS keyframes for performance
-- Svelte transitions for component states
-- Staggered delays for sequential appearance
-- Hardware-accelerated transforms
-
-### Responsive Design
-
-While optimized for 1440px desktop screens, the design includes:
-- Minimum width constraints
-- Flexible container sizing
-- Proper overflow handling
-
-## 🎯 Future Enhancements
-
-- [ ] Mobile responsive design
-- [ ] Form validation with error states
-- [ ] API integration for authentication
-- [ ] Additional page routes
-- [ ] Internationalization (i18n)
-- [ ] Dark mode support
-- [ ] Accessibility improvements (ARIA labels, keyboard navigation)
-
-## 🔗 Design Reference
-
-The design is based on the Figma file:
-[Sistema Clique e Retira](https://www.figma.com/design/xCCqMmngtZ6G8symsyJ7O5/Sistema-Clique-e-Retira?node-id=25-2772&t=cBYxPyMJrrNlzclz-4)
-
-## 📝 Development Notes
+### Import Aliases
+The project uses import aliases for cleaner imports:
+- `$lib`: `./src/lib`
+- `$components`: `./src/lib/components`
+- `$pages`: `./src/lib/pages`
+- `$assets`: `./src/assets`
 
 ### Code Style
-- All code and comments are in English
-- Components follow single-responsibility principle
-- Consistent naming conventions (PascalCase for components)
-- Proper TypeScript types can be added via `svelte-check`
+- Use English for all code, comments, and documentation
+- Follow Svelte best practices
+- Use JSDoc comments for component props
+- Keep components small and focused
+- Use `cn()` utility for conditional classes
 
-### Performance Considerations
-- Images are optimized and loaded efficiently
-- Animations use CSS transforms for GPU acceleration
-- Minimal JavaScript for interactions
-- Lazy loading can be implemented for larger applications
+### Git Workflow
+```bash
+# Feature branch
+git checkout -b feature/component-name
+
+# Commit with conventional commits
+git commit -m "feat: add new animation to login panel"
+
+# Push and create PR
+git push origin feature/component-name
+```
+
+## 🚀 Deployment
+
+The project is configured for easy deployment:
+
+1. **Build the project**
+   ```bash
+   pnpm build
+   ```
+
+2. **Preview locally**
+   ```bash
+   pnpm preview
+   ```
+
+3. **Deploy to your platform**
+   - **Vercel**: Connect GitHub repo and deploy automatically
+   - **Netlify**: Drag & drop dist folder or connect repo
+   - **Custom**: Upload dist folder to your server
+
+### Environment Variables
+Create a `.env` file for environment-specific configuration:
+```env
+VITE_API_URL=https://api.lojastorra.com.br
+VITE_APP_NAME=Click & Retire
+```
+
+## 📱 Browser Support
+
+- Chrome/Edge (latest)
+- Firefox (latest)
+- Safari (latest)
+- Mobile browsers (iOS Safari, Chrome Android)
+
+## 🔍 Performance Optimizations
+
+- **Lazy Loading**: Images loaded on demand
+- **Code Splitting**: Routes loaded dynamically
+- **CSS Optimization**: PurgeCSS removes unused styles
+- **Asset Optimization**: SVGs optimized, images compressed
+- **Animation Performance**: GPU-accelerated transforms
+
+## 🧪 Testing
+
+```bash
+# Run tests (when configured)
+pnpm test
+
+# Run tests in watch mode
+pnpm test:watch
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Commit Convention
+- `feat:` New features
+- `fix:` Bug fixes
+- `docs:` Documentation changes
+- `style:` Code style changes
+- `refactor:` Code refactoring
+- `test:` Test additions/changes
+- `chore:` Maintenance tasks
 
 ## 📄 License
 
@@ -179,4 +234,4 @@ This project is proprietary to Lojas Torra. All rights reserved.
 
 ---
 
-Built with ❤️ using Svelte and Tailwind CSS
+**Created with ❤️ by Maia for Lojas Torra**
