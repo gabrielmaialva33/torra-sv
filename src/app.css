@@ -3,17 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Reset and base styles */
-@layer base {
-  body {
-    @apply m-0 p-0 min-h-screen;
-  }
-  
-  #app {
-    @apply w-full h-full min-h-screen;
-  }
-}
-
 /* Custom gradient background for the right panel */
 .gradient-panel {
   background: radial-gradient(circle at 50% 58%, #42437B 0%, #181945 100%);
