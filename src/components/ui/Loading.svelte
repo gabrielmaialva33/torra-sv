@@ -87,7 +87,7 @@
             translateY(-{size === 'small' ? 12 : size === 'medium' ? 18 : 24}px);
           animation-delay: {i * 0.2}s;
         "
-            />
+            ></div>
         {/each}
     </div>
 </div>

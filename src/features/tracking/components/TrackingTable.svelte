@@ -63,6 +63,7 @@
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
             {#each orders as order}
+                {@const statusConfig = getStatusBadge(order.status)}
                 <tr class="hover:bg-gray-50 transition-colors">
                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                         #{order.code}
@@ -74,10 +75,9 @@
                         {order.customerCpf}
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap">
-                        {@const statusConfig = getStatusBadge(order.status)}
                         <span class="inline-flex px-2 text-xs leading-5 font-semibold rounded-full {statusConfig.color}">
-                {statusConfig.label}
-              </span>
+                            {statusConfig.label}
+                        </span>
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         {order.storeName}

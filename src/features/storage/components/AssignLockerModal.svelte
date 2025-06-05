@@ -74,9 +74,9 @@
 
             <!-- Locker Selection -->
             <div class="space-y-4">
-                <label class="block text-sm font-medium text-gray-700">
+                <p class="block text-sm font-medium text-gray-700">
                     Locker Disponível <span class="text-red-500">*</span>
-                </label>
+                </p>
 
                 {#if availableLockers.length === 0}
                     <div class="text-center py-8 text-gray-500">

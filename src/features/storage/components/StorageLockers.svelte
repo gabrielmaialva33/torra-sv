@@ -51,9 +51,11 @@
     {#each lockers as locker}
         {@const Icon = getLockerIcon(locker.status)}
         <div class="relative">
-            <div
-                    class="p-4 rounded-lg border-2 transition-all cursor-pointer {getLockerStatusColor(locker.status)}"
+            <button
+                    class="p-4 rounded-lg border-2 transition-all cursor-pointer {getLockerStatusColor(locker.status)} w-full text-left"
                     on:click={() => locker.status === 'occupied' && dispatch('view', locker)}
+                    type="button"
+                    disabled={locker.status !== 'occupied'}
             >
                 <!-- Locker Number -->
                 <div class="flex items-center justify-between mb-3">
@@ -104,7 +106,7 @@
                         Em Manutenção
                     </div>
                 {/if}
-            </div>
+            </button>
         </div>
     {/each}
 </div>

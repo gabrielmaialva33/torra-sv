@@ -1,6 +1,6 @@
 <script>
     import {createEventDispatcher} from 'svelte';
-    import {AlertCircle, Clock, Lock, Package, Settings, User} from 'lucide-svelte';
+    import {AlertCircle, Archive, Clock, Lock, Package, Settings, User} from 'lucide-svelte';
 
     export let lockers = [];
 
@@ -115,11 +115,10 @@
             <div class="grid grid-cols-10 gap-2">
                 {#each row as locker}
                     {@const Icon = getIcon(locker.status)}
-                    <div
-                            class="relative group"
+                    <button
+                            class="relative group text-left w-full"
                             on:click={() => handleLockerClick(locker)}
-                            role="button"
-                            tabindex="0"
+                            type="button"
                     >
                         <div class="
               p-2 rounded-lg border-2 transition-all
@@ -188,7 +187,7 @@
                                 <Settings class="h-3 w-3 text-gray-600"/>
                             </button>
                         {/if}
-                    </div>
+                    </button>
                 {/each}
             </div>
         {/each}

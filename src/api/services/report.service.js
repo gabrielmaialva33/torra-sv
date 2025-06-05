@@ -1,5 +1,5 @@
-import { apiClient } from '../client';
-import { mockReportsData } from '../mocks/report.mock';
+import {apiClient} from '../client';
+import {mockReportsData} from '../mocks/report.mock';
 
 /**
  * Report service
@@ -21,7 +21,7 @@ class ReportService {
         }
 
         try {
-            const response = await apiClient.get('/reports', { params: filters });
+            const response = await apiClient.get('/reports', {params: filters});
             return {
                 success: true,
                 data: response.data
@@ -75,12 +75,12 @@ class ReportService {
                 filters,
                 format
             });
-            
+
             // Handle file download
             if (response.data && response.data.url) {
                 window.open(response.data.url, '_blank');
             }
-            
+
             return {
                 success: true,
                 data: response.data

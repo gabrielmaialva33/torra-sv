@@ -141,7 +141,7 @@ export const mockReportsData = {
         // Simulate API delay
         await new Promise(resolve => setTimeout(resolve, 1500));
 
-        console.log('Exporting report:', { filters, format });
+        console.log('Exporting report:', {filters, format});
 
         return {
             success: true,

@@ -1,5 +1,5 @@
-import { apiClient } from '../client';
-import { mockSupportData } from '../mocks/support.mock';
+import {apiClient} from '../client';
+import {mockSupportData} from '../mocks/support.mock';
 
 /**
  * Support service
@@ -21,7 +21,7 @@ class SupportService {
         }
 
         try {
-            const response = await apiClient.get('/support/tickets', { params: filters });
+            const response = await apiClient.get('/support/tickets', {params: filters});
             return {
                 success: true,
                 data: response.data
