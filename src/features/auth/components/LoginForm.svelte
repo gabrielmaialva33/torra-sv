@@ -1,9 +1,11 @@
 <script>
     import {Lock, User} from 'lucide-svelte';
-    import {authStore} from '../../../stores/auth.store';
-    import Button from '../../../components/ui/button.svelte';
+    import {authStore} from '$src/stores/auth.store.js';
+
+    import Button from "$src/components/ui/Button.svelte";
     import InputField from '../../../components/ui/InputField.svelte';
     import torraLogo from '../../../assets/icons/brand/torra-logo-square.png';
+
 
     let username = '';
     let password = '';
