@@ -1,203 +1,182 @@
-# Lojas Torra - Click & Retire System
+# Torra Click & Retire - Modern Web Application
 
-A modern web application built with Svelte and Tailwind CSS, implementing a visually striking login interface for the
-Lojas Torra Click & Retire system.
+A visually striking, modern web application built with Svelte and Tailwind CSS for the Torra Click & Retire system. This project creates an immersive login experience with smooth animations, micro-interactions, and a distinctive visual identity.
 
-## 🚀 Project Overview
+## 🎨 Design Philosophy
 
-This project implements a login page based on the Figma design for Lojas Torra's Click & Retire system. The design
-emphasizes a modern, clean aesthetic with smooth animations and a distinctive visual identity.
+The application implements a sophisticated two-panel layout that communicates the brand's modern, efficient service:
 
-### Key Features
+- **Left Panel**: Clean, minimalist login form with subtle interactions
+- **Right Panel**: Dynamic gradient background with animated illustrations
+- **Visual Identity**: Incorporates Torra's orange (#FF5101) and purple gradient palette
+- **Micro-interactions**: Smooth transitions, hover effects, and loading states
 
-- **Modern Split-Screen Design**: Clean white form panel with gradient background panel
-- **Smooth Animations**: Entry animations using Svelte transitions
-- **Interactive Elements**: Hover effects and micro-interactions
-- **Fully Responsive**: Adapts seamlessly from mobile to desktop
-- **Accessible**: Semantic HTML with proper form structure
-- **Type-Safe**: Written with best practices and clear documentation
+## 🚀 Quick Start
 
-## 🛠️ Technology Stack
+### Prerequisites
 
-- **Svelte**: Modern reactive framework for building user interfaces
-- **Tailwind CSS**: Utility-first CSS framework for rapid UI development
-- **Vite**: Next-generation frontend tooling for fast development
-- **Lucide Icons**: Beautiful & consistent icon set
+- Node.js 16+ 
+- npm or pnpm
 
-## 📋 Prerequisites
-
-- Node.js (v16 or higher)
-- npm or yarn package manager
-
-## 🔧 Installation & Setup
-
-1. Clone the repository:
+### Installation
 
 ```bash
+# Clone the repository
 git clone [repository-url]
 cd torra-sv
-```
 
-2. Install dependencies:
-
-```bash
+# Install dependencies
 npm install
-```
 
-3. Start the development server:
-
-```bash
+# Start development server
 npm run dev
 ```
 
-4. Build for production:
+The application will be available at `http://localhost:5173`
+
+### Build for Production
 
 ```bash
 npm run build
+npm run preview
 ```
-
-## 🎨 Design System
-
-### Color Palette (from Figma)
-
-```css
-/* Primary Colors */
---torra-orange: #FF5101
-
-;
---torra-orange-light: #FF7B3D
-
-;
---torra-dark: #1A1630
-
-;
-
-/* Gradient Colors */
---torra-gradient-start: #42437B
-
-;
---torra-gradient-end: #181945
-
-;
-
-/* Gray Scale */
---torra-gray-100: #F0F0F2
-
-;
---torra-gray-200: #EBECF1
-
-;
---torra-gray-300: #E3E4E9
-
-;
---torra-gray-400: #DBE2EB
-
-;
---torra-gray-500: #6C757D
-
-;
---torra-gray-600: #495057
-
-;
-```
-
-### Typography
-
-- **Primary Font**: Inter (400, 700)
-- **Secondary Font**: Roboto (400, 500)
-
-### Design Decisions
-
-1. **Visual Identity**: The design maintains Lojas Torra's brand identity with the distinctive orange color (#FF5101)
-   and clean, modern aesthetics.
-
-2. **User Experience**:
-    - Clear visual hierarchy guides users to the login form
-    - Smooth animations create a premium feel
-    - Hover states provide immediate feedback
-
-3. **Accessibility**:
-    - High contrast ratios for text readability
-    - Semantic HTML structure
-    - Keyboard navigation support
 
 ## 📁 Project Structure
 
 ```
 torra-sv/
 ├── src/
-│   ├── assets/           # Static assets (images, fonts)
+│   ├── assets/          # Images, icons, and static assets
+│   │   ├── icons/       # UI and brand icons
+│   │   └── images/      # Illustrations and backgrounds
 │   ├── lib/
-│   │   ├── components/   # Svelte components
-│   │   │   └── Login.svelte
-│   │   └── utils.js      # Utility functions
-│   ├── App.svelte        # Main application component
-│   ├── app.css          # Global styles with Tailwind
+│   │   ├── components/  # Reusable UI components
+│   │   │   ├── IconInput.svelte      # Input field with icon prefix
+│   │   │   ├── LoginPanel.svelte     # Login form container
+│   │   │   ├── IllustrationPanel.svelte # Animated illustrations
+│   │   │   └── Footer.svelte         # Page footer
+│   │   └── pages/       # Page components
+│   │       └── LandingPage.svelte    # Main landing page
+│   ├── App.svelte       # Root application component
+│   ├── app.css          # Global styles and animations
 │   └── main.js          # Application entry point
-├── public/              # Public static files
-├── tailwind.config.js   # Tailwind configuration
-├── postcss.config.js    # PostCSS configuration
-├── vite.config.js       # Vite configuration
-└── package.json         # Project dependencies
+├── tailwind.config.js   # Tailwind configuration with custom tokens
+└── vite.config.js       # Vite bundler configuration
 ```
 
-## 🎯 Component Architecture
+## 🎨 Design System
 
-### Login Component
+### Colors
 
-The main Login component (`src/lib/components/Login.svelte`) implements:
+The color palette is extracted from the Figma design and configured in Tailwind:
 
-- **Form Handling**: Username and password inputs with validation
-- **Animations**: Entry animations using Svelte's transition system
-- **Micro-interactions**: Button hover effects, input focus states
-- **Responsive Design**: Mobile-first approach with breakpoints
+- **Primary Orange**: `#FF5101` (torra-orange)
+- **Light Orange**: `#FF7B3D` (torra-orange-light)
+- **Dark Text**: `#1A1630` (torra-dark)
+- **Purple Gradient**: `#42437B` → `#181945`
+- **Grays**: Multiple shades from `#FFFFFF` to `#000000`
+
+### Typography
+
+- **Headings**: Roboto Medium, 32px
+- **Body Text**: Roboto Regular, 16px
+- **Input Fields**: Roboto Regular, 15px
+- **Buttons**: Inter Bold, 16px with letter-spacing
+
+### Animations
+
+All animations use cubic-bezier easing for natural motion:
+
+- **Slide-in**: Panels slide from left/right on load
+- **Fade-in**: Sequential element appearance
+- **Float**: Continuous floating animation for illustrations
+- **Hover Effects**: Subtle scale and shadow changes
+
+## 🧩 Key Components
+
+### LandingPage
+The main container that orchestrates the two-panel layout and manages the overall page structure.
+
+### LoginPanel
+Contains the authentication form with:
+- Animated logo
+- Custom input fields with icon prefixes
+- Interactive submit button with loading state
+- Password recovery link
+
+### IconInput
+A reusable input component featuring:
+- Icon prefix in a separate container
+- Focus states with color transitions
+- Hover effects
+- Accessibility support
+
+### IllustrationPanel
+Dynamic right panel with:
+- Radial gradient background
+- Floating illustrations with staggered animations
+- Particle effects
+- Click & Retire branding
+
+## 🔧 Technical Details
+
+### Tailwind Configuration
+
+The `tailwind.config.js` includes:
+- Custom color tokens matching Figma design
+- Extended spacing scale for precise layouts
+- Custom border radius variants
+- Animation utilities
+- Typography presets
 
 ### Animation System
 
-- **Entry Animations**: Components fly in with staggered delays
-- **Hover Effects**: Smooth transitions on interactive elements
-- **Loading States**: Visual feedback during form submission
-- **Floating Elements**: Subtle background animations for visual interest
+Animations are implemented using:
+- CSS keyframes for performance
+- Svelte transitions for component states
+- Staggered delays for sequential appearance
+- Hardware-accelerated transforms
 
-## 🔄 Development Workflow
+### Responsive Design
 
-### Figma Integration
+While optimized for 1440px desktop screens, the design includes:
+- Minimum width constraints
+- Flexible container sizing
+- Proper overflow handling
+
+## 🎯 Future Enhancements
+
+- [ ] Mobile responsive design
+- [ ] Form validation with error states
+- [ ] API integration for authentication
+- [ ] Additional page routes
+- [ ] Internationalization (i18n)
+- [ ] Dark mode support
+- [ ] Accessibility improvements (ARIA labels, keyboard navigation)
+
+## 🔗 Design Reference
 
 The design is based on the Figma file:
-[Sistema Clique e Retira](https://www.figma.com/design/xCCqMmngtZ6G8symsyJ7O5/Sistema-Clique-e-Retira?node-id=25-2772)
+[Sistema Clique e Retira](https://www.figma.com/design/xCCqMmngtZ6G8symsyJ7O5/Sistema-Clique-e-Retira?node-id=25-2772&t=cBYxPyMJrrNlzclz-4)
 
-Design tokens (colors, typography, spacing) have been extracted and implemented in the Tailwind configuration.
+## 📝 Development Notes
 
-### Version Control
+### Code Style
+- All code and comments are in English
+- Components follow single-responsibility principle
+- Consistent naming conventions (PascalCase for components)
+- Proper TypeScript types can be added via `svelte-check`
 
-This project is ready for GitHub integration. To push to a repository:
+### Performance Considerations
+- Images are optimized and loaded efficiently
+- Animations use CSS transforms for GPU acceleration
+- Minimal JavaScript for interactions
+- Lazy loading can be implemented for larger applications
 
-```bash
-git init
-git add .
-git commit -m "Initial commit: Lojas Torra Click & Retire login page"
-git remote add origin [your-repository-url]
-git push -u origin main
-```
-
-## 🚀 Future Enhancements
-
-1. **Authentication Integration**: Connect to backend authentication service
-2. **Form Validation**: Add comprehensive client-side validation
-3. **Error Handling**: Implement error states and user feedback
-4. **Additional Pages**: Extend to full application flow
-5. **Testing**: Add unit and integration tests
-6. **Performance**: Implement lazy loading and code splitting
-
-## 📝 License
+## 📄 License
 
 This project is proprietary to Lojas Torra. All rights reserved.
 
-## 👥 Contributors
-
-- Frontend Development: [Your Name]
-- Design: Based on Figma design by Lojas Torra team
-
 ---
 
-For questions or support, please contact the development team.
+Built with ❤️ using Svelte and Tailwind CSS
