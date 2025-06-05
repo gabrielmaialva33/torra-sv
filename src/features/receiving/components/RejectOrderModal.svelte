@@ -69,7 +69,7 @@
                     Você está prestes a rejeitar o pedido:
                 </p>
                 <p class="mt-2 font-medium text-gray-900">
-                    #{order?.code} - {order?.customerName}
+                    #{order?.code || ''} - {order?.customerName || ''}
                 </p>
             </div>
 
